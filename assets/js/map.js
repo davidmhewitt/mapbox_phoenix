@@ -11,10 +11,21 @@ const map = new mapboxgl.Map({
     zoom: 12, // starting zoom
 });
 
-const popup = new mapboxgl.Popup({ closeOnClick: false })
+const marker = new mapboxgl.Marker({
+    draggable: true
+})
     .setLngLat([139.71, 35.64])
-    .setHTML('<h1 class="text-lg">Hello From Phoenix!</h1>')
     .addTo(map);
+
+const markerMovedEvent = new CustomEvent(
+    'marker-moved',
+    {detail: marker}
+);
+
+marker.on('dragend', () => {
+    const mapDiv = document.getElementById('map');
+    mapDiv.dispatchEvent(markerMovedEvent);
+});
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
