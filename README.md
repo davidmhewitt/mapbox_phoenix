@@ -2,13 +2,15 @@
 
 Code samples to go with my [tutorial on how to integrate Mapbox with Phoenix](https://davidmhewitt.hashnode.dev/series/mapbox-phoenix).
 
+⚠️ **Note**: Make sure you replace `YOUR_ACCESS_TOKEN_HERE` in `assets/js/map.js` with a valid Mapbox token.
+
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
-  * Run npm ci in assets/ to install JavaScript dependencies
+  * Run `npm ci` in `assets/` to install JavaScript dependencies
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit http://localhost:4000/map from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 

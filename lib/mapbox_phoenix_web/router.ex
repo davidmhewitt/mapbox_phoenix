@@ -18,6 +18,7 @@ defmodule MapboxPhoenixWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/map", MapLive
   end
 
   # Other scopes may use custom stacks.
